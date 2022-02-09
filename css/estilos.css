@@ -58,26 +58,11 @@ td{
     background-position: center;
     background-size: cover; 
 }
-
-.contenedor__contacto{
-    display: grid;
-    grid-template-areas: "header"
-                         "contenido"
-                         "footer";
-    grid-template-rows: 20% auto 20%;
-    justify-content: center;                     
-    height:100vh;
+/*
+.centradoVertical{
+    margin-bottom: 50px;
 }
-
-.main__formulario{
-    width: 450px;
-    margin: 50px auto;
-    background-image: linear-gradient(to top, cyan, black);
-    border-radius: 10px;
-    border: solid 2px blanchedalmond;
-    text-align: center;
-}
-
+*/
 nav {
     grid-area: header;
 }
@@ -135,11 +120,19 @@ nav{
 #contenedor{
     display: grid;
     grid-template-areas: "header header"
+                         "contenido0 contenido0"
                          "contenido contenido"
                          "footer footer";
-    grid-template-rows: 20% auto 10% ;
-    grid-template-columns: 50% 50%;                      
+    grid-template-rows: 20% auto auto 10% ;
+    grid-template-columns: 50% 50%;    
+    grid-row-gap: 20px;                  
     height:100vh; 
+}
+
+#carouselExampleIndicators{
+    grid-area: contenido0;
+    width: 60%;
+    margin:auto;
 }
 
 header {
@@ -237,7 +230,7 @@ footer p{
 footer a {border: solid 2px cyan;}
 
 @media (max-width: 420px) {
-    #contenedor{
+ /*   #contenedor{
         display: grid;
         grid-template-areas: "header"
                              "contenido"
@@ -245,6 +238,7 @@ footer a {border: solid 2px cyan;}
                              "footer";
         grid-template-columns:100%;
     }
+ */   
 header {
     grid-area: header;
 }
@@ -375,7 +369,6 @@ li{
     }
 }
 
-
 section p {
     background-color: black;
     border-radius: 10px;
@@ -415,8 +408,9 @@ section p {
     border:solid 2px cyan;
 }
 
-/*MEDIAQUERY CONTACTO*/
+/*MEDIAQUERY CONTACTO
 .main__formulario{
     width: 250px;
 }
+*/
 }
