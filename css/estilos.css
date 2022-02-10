@@ -58,11 +58,7 @@ td{
     background-position: center;
     background-size: cover; 
 }
-/*
-.centradoVertical{
-    margin-bottom: 50px;
-}
-*/
+
 nav {
     grid-area: header;
 }
@@ -139,32 +135,9 @@ header {
     grid-area: header;
 }
 
-ul{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-li{
-    font-size: 25px;
-    display: inline-block;
-    background-image: linear-gradient(to top, grey, black);
-    padding: 0px 15px;
-    margin: 15px 30px 0px 30px;
-    border-radius: 15px;
-    border: solid 1px cyan;
-}
-
 li a{
     text-decoration: none;
 }
-
-a:hover{
-    background-color: tomato;
-}
-
 
 .div__titulo__articleP{
     grid-area: contenido;
@@ -267,7 +240,7 @@ header {
 }
 }
 
-/*MEDIA PARA TODOS LOS NAV SUPERIORES EL SITIO*/
+/*MEDIA PARA TODOS LOS NAV SUPERIORES EL SITIO
 @media (max-width: 420px) {
 ul{
     justify-content: center;
@@ -280,7 +253,7 @@ li{
     padding: 5px;
 }
 }
-
+*/
 /*Pagina multimedia con GRID Y FLEXBOX*/
 .tituloMultimedia{
     display: flex;
@@ -407,10 +380,4 @@ section p {
     padding: 5px;
     border:solid 2px cyan;
 }
-
-/*MEDIAQUERY CONTACTO
-.main__formulario{
-    width: 250px;
-}
-*/
 }
