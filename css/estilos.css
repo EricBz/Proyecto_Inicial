@@ -111,23 +111,10 @@ nav{
     grid-area: footer;
 }
 
-/*GRID Y FLEXBOX INDEX*/
-
-#contenedor{
-    display: grid;
-    grid-template-areas: "header header"
-                         "contenido0 contenido0"
-                         "contenido contenido"
-                         "footer footer";
-    grid-template-rows: 20% auto auto 10% ;
-    grid-template-columns: 50% 50%;    
-    grid-row-gap: 20px;                  
-    height:100vh; 
-}
-
+/*INDEX*/
 #carouselExampleIndicators{
     grid-area: contenido0;
-    width: 60%;
+    width: 90%;
     margin:auto;
 }
 
@@ -135,8 +122,30 @@ header {
     grid-area: header;
 }
 
+ul{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li{
+    font-size: 25px;
+    display: inline-block;
+    background-image: linear-gradient(to top, grey, black);
+    padding: 0px 15px;
+    margin: 15px 30px 0px 30px;
+    border-radius: 15px;
+    border: solid 1px cyan;
+}
+
 li a{
     text-decoration: none;
+}
+
+a:hover{
+    background-color: magenta;
 }
 
 .div__titulo__articleP{
@@ -203,7 +212,7 @@ footer p{
 footer a {border: solid 2px cyan;}
 
 @media (max-width: 420px) {
- /*   #contenedor{
+/*   #contenedor{
         display: grid;
         grid-template-areas: "header"
                              "contenido"
@@ -211,7 +220,7 @@ footer a {border: solid 2px cyan;}
                              "footer";
         grid-template-columns:100%;
     }
- */   
+*/
 header {
     grid-area: header;
 }
@@ -240,7 +249,7 @@ header {
 }
 }
 
-/*MEDIA PARA TODOS LOS NAV SUPERIORES EL SITIO
+/*MEDIA PARA TODOS LOS NAV SUPERIORES EL SITIO*/
 @media (max-width: 420px) {
 ul{
     justify-content: center;
@@ -253,8 +262,8 @@ li{
     padding: 5px;
 }
 }
-*/
-/*Pagina multimedia con GRID Y FLEXBOX*/
+
+/*Pagina multimedia*/
 .tituloMultimedia{
     display: flex;
     margin: 40px 20px;
