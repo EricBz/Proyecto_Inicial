@@ -1,0 +1,315 @@
+/*Variables*/
+* {
+  font-family: 'Architects Daughter', cursive;
+  color: white;
+  line-height: 1.8;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px; }
+
+.index__body__fondo {
+  background-image: url(../imgs/daftluces.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+/*Pagina Info*/
+.info__body__fondo {
+  background-image: url(../imgs/Daft_Punk_Tron.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+.body__contenedor {
+  display: grid;
+  grid-template-areas: "header" "contenido" "footer";
+  grid-template-rows: 20% auto 20%;
+  justify-content: center; }
+
+nav {
+  grid-area: header; }
+
+.main__table {
+  background-image: url(../imgs/fondoindoxtexto.png);
+  background-position: center;
+  background-size: 100%;
+  width: 80%;
+  margin: 80px auto;
+  text-align: center;
+  grid-area: contenido; }
+
+td {
+  font-weight: bold; }
+
+.bloque__footer {
+  grid-area: footer; }
+
+/*Pagina contacto*/
+.contacto__body__fondo {
+  background-image: url(../imgs/daft-punk.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+nav {
+  grid-area: header; }
+
+.div__formulario {
+  grid-area: contenido; }
+
+.letrasNegras {
+  color: black; }
+
+.bloque__footer {
+  grid-area: footer; }
+
+/*Pagina musica*/
+.musica__body__fondo {
+  background-image: url(../imgs/daft.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
+.contenedor__musica {
+  display: grid;
+  grid-template-areas: "header" "contenido" "footer";
+  grid-template-rows: 20% auto 20%;
+  justify-content: center; }
+
+nav {
+  grid-area: header; }
+
+.section__spotify {
+  width: 100%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  grid-area: contenido; }
+
+.bloque__footer {
+  grid-area: footer; }
+
+/*INDEX*/
+#carouselExampleIndicators {
+  grid-area: contenido0;
+  width: 90%;
+  margin: auto; }
+
+header {
+  grid-area: header; }
+
+ul {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+li {
+  font-size: 25px;
+  display: inline-block;
+  background-image: linear-gradient(to top, grey, black);
+  padding: 0px 15px;
+  margin: 15px 30px 0px 30px;
+  border-radius: 15px;
+  border: solid 1px cyan; }
+
+li a {
+  text-decoration: none; }
+
+a:hover {
+  background-color: magenta; }
+
+.div__titulo__articleP {
+  grid-area: contenido;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+#titulo {
+  font-family: 'Island Moments', cursive;
+  font-size: 200px;
+  display: block;
+  margin: 0px;
+  animation-name: animacionTitulo;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in; }
+
+@keyframes animacionTitulo {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0,5; }
+  100% {
+    opacity: 1; } }
+
+.article__p {
+  background-color: #1f1b1b;
+  width: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px cyan;
+  height: 350px; }
+
+.bloque__footer {
+  grid-area: footer;
+  padding-top: 20px; }
+
+.bloque__links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+footer {
+  text-align: center; }
+
+footer p {
+  margin: 50px; }
+
+footer a {
+  border: solid 2px cyan; }
+
+@media (max-width: 420px) {
+  /*   #contenedor{
+            display: grid;
+            grid-template-areas: "header"
+                                 "contenido"
+                                 "contenido"
+                                 "footer";
+            grid-template-columns:100%;
+        }
+    */
+  header {
+    grid-area: header; }
+  .div__titulo__articleP {
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    text-align: center; }
+  #titulo {
+    font-size: 100px;
+    display: inline-block; }
+  .article__p {
+    background-color: #1f1b1b;
+    width: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 2px cyan;
+    height: 350px;
+    margin: 0px auto; } }
+
+/*MEDIA PARA TODOS LOS NAV SUPERIORES EL SITIO*/
+@media (max-width: 420px) {
+  ul {
+    justify-content: center;
+    background-image: linear-gradient(to top, grey, black);
+    border-bottom: solid 2px pink; }
+  li {
+    font-size: 13px;
+    margin: 10px 5px;
+    padding: 5px; } }
+
+/*Pagina multimedia*/
+.multi__body__fondo {
+  background-image: url(../imgs/daft-punk-1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+  .multi__body__fondo .tituloMultimedia {
+    display: flex;
+    margin: 40px 20px;
+    animation-name: animacionTitulo;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in; }
+  .multi__body__fondo .section__multimedia {
+    display: grid;
+    grid-template-areas: "grilla1 grilla2" "grilla3 grilla4" "grilla5 grilla6" "grilla7 grilla7";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    margin: 0px 20px;
+    align-items: center;
+    justify-items: center; }
+    .multi__body__fondo .section__multimedia img {
+      width: 350px;
+      border: solid 5px blanchedalmond; }
+    .multi__body__fondo .section__multimedia .imagen1 {
+      grid-area: grilla1; }
+      .multi__body__fondo .section__multimedia .imagen1 {
+        animation-name: animacionTitulo;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: initial;
+        animation-timing-function: ease-in; }
+    .multi__body__fondo .section__multimedia .p1 {
+      grid-area: grilla2; }
+    .multi__body__fondo .section__multimedia .img2 {
+      grid-area: grilla4; }
+      .multi__body__fondo .section__multimedia .img2 {
+        animation-name: animacionTitulo;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: initial;
+        animation-timing-function: ease-in; }
+    .multi__body__fondo .section__multimedia .txt2 {
+      grid-area: grilla3; }
+    .multi__body__fondo .section__multimedia .txt3 {
+      grid-area: grilla6; }
+    .multi__body__fondo .section__multimedia .videoTrajes {
+      grid-area: grilla5;
+      justify-content: space-between;
+      text-align: center; }
+      .multi__body__fondo .section__multimedia .videoTrajes {
+        animation-name: animacionTitulo;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: initial;
+        animation-timing-function: ease-in; }
+    .multi__body__fondo .section__multimedia .txt4 {
+      grid-area: grilla7; }
+
+@keyframes animacionTitulo {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0,5; }
+  100% {
+    opacity: 1; } }
+
+section p {
+  background-color: black;
+  border-radius: 10px;
+  width: 600px;
+  padding: 5px; }
+
+@media (max-width: 420px) {
+  .section__multimedia {
+    display: grid;
+    grid-template-areas: "grilla1" "grilla2" "grilla4" "grilla3" "grilla5" "grilla6" "grilla7";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-row-gap: 10px; }
+  .section__multimedia img {
+    width: 300px; }
+  .tituloMultimedia {
+    display: inline-block;
+    margin: 50px auto;
+    text-align: center; }
+  section p {
+    background-color: black;
+    border-radius: 10px;
+    width: 95%;
+    padding: 5px;
+    border: solid 2px cyan; } }
