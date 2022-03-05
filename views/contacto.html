@@ -28,83 +28,82 @@
       </nav>
     </div>
   </header>
-  <main class="main__formulario">
-    <h3>Puedes contactarte con nosotros</h3>
-    <p>Ingresa tus datos para que nos podamos contactar con vos.</p>
-    <fieldset>
-      <div>
-        <form action="#" method="get" enctype="multipart/form-data">
-          <div>
-            <label for="nombre">Nombre completo</label>
-            <input class="letrasNegras" name="nombre" type="text" placeholder="Nombre y Apellido" required autofocus
-              autocomplete="off" minlength="5" maxlength="100">
-          </div>
-
-          <div>
-            <label for="mail">Mail de contacto</label>
-            <input class="letrasNegras" name="mail" type="email" placeholder="Ingrese su mail" required autofocus
-              autocomplete="off">
-          </div>
-
-          <fieldset>
-            <legend>¿Cómo conociste a Daft punk?</legend>
+    <main class="main__formulario">
+        <h3>Puedes contactarte con nosotros</h3>
+        <p>Ingresa tus datos para que nos podamos contactar con vos.</p>
+        <fieldset>
             <div>
-              <label for="conociste">Selecciona alguna de las posibilidades</label>
-              <select name="conociste" class="letrasNegras">
-                <option value="marca" selected disabled>Marca una opción</option>
-                <option value="amigos">A través de amigos</option>
-                <option value="internet">Casualmente en internet</option>
-                <option value="colaboracion">Colaboración con otros artistas</option>
-                <option value="radio">Escuchando radio</option>
-                <option value="spotify">Me apareció en Spotify</option>
-                <option value="otros">Otros</option>
-              </select>
+                <form action="#" method="get" enctype="multipart/form-data">
+                    <div>
+                        <label for="nombre">Nombre completo</label>
+                        <input class="letrasNegras" name="nombre" type="text" placeholder="Nombre y Apellido" required autofocus
+                            autocomplete="off" minlength="5" maxlength="100" aria-required="true">
+                    </div>
 
+                    <div>
+                        <label for="mail">Mail de contacto</label>
+                        <input class="letrasNegras" name="mail" type="email" placeholder="Ingrese su mail" required autofocus
+                            autocomplete="on" aria-required="true">
+                    </div>
+
+                    <fieldset>
+                        <legend>¿Cómo conociste a Daft punk?</legend>
+                        <div>
+                            <label for="conociste">Selecciona alguna de las posibilidades</label>
+                            <select name="conociste" class="letrasNegras contacto__formulario__select--ajuste">
+                                <option value="marca" selected disabled>Marca una opción</option>
+                                <option value="amigos">A través de amigos</option>
+                                <option value="internet">Casualmente en internet</option>
+                                <option value="colaboracion">Colaboración con otros artistas</option>
+                                <option value="radio">Escuchando radio</option>
+                                <option value="spotify">Me apareció en Spotify</option>
+                                <option value="otros">Otros</option>
+                            </select>
+
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>¿Desea recibir más información?</legend>
+                        <label for="si">sí
+                            <input id="si" name="un_leng" type="radio" value="si" checked required>
+                        </label>
+                        <label for="no">no
+                            <input id="no" name="un_leng" type="radio" value="si" required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <div>
+                            <legend>Ingrese un Comentario</legend>
+                            <textarea name="comentario" class="letrasNegras contacto__formulario__textarea--ajuste" cols="40" rows="4"
+                                placeholder="Ingrese un Comentario"></textarea>
+
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+
+                            <legend>Envie o limpie el formulario</legend>
+
+                            <input class="letrasNegras contacto__formulario__botones--borde" type="submit" value="Enviar">
+                            <input class="letrasNegras contacto__formulario__botones--borde" type="reset" value="Limpiar">
+                        </div>
+                    </fieldset>
             </div>
-          </fieldset>
-          <fieldset>
-            <legend>¿Desea recibir más información?</legend>
-            <label for="si">sí
-              <input id="si" name="un_leng" type="radio" value="si" checked required>
-            </label>
-            <label for="no">no
-              <input id="no" name="un_leng" type="radio" value="si" required>
-            </label>
-          </fieldset>
-
-          <fieldset>
-            <div>
-              <legend>Ingrese un Comentario</legend>
-              <textarea name="comentario" class="letrasNegras" cols="40" rows="4"
-                placeholder="Ingrese un Comentario"></textarea>
-
-            </div>
-          </fieldset>
-          <fieldset>
-            <div>
-
-              <legend>Envie o limpie el formulario</legend>
-
-              <input class="letrasNegras" type="submit" value="Enviar">
-              <input class="letrasNegras" type="reset" value="Limpiar">
-            </div>
-          </fieldset>
-      </div>
-    </fieldset>
-    </form>
-    </div>
-  </main>
+        </fieldset>
+        </form>
+        </div>
+    </main>
   <div class="container">
     <footer class="bloque__footer">
       <div class="bloque__links">
         <a class="footericonos" href="https://es-la.facebook.com/daftpunk" target="_blanck"><img
-            src="../imgs/facebook.png" width="30px"></a>
+            src="../imgs/facebook.png" width="30px" alt="icono facebook"></a>
         <a class="footericonos" href="https://twitter.com/daftpunk_music" target="_blanck"><img src="../imgs/tw.png"
-            width="30px"></a>
+            width="30px" alt="icono twitter"></a>
         <a class="footericonos" href="https://www.instagram.com/daftpunk/?hl=es" target="_blanck"><img
-            src="../imgs/ig.png" width=30px></a>
+            src="../imgs/ig.png" width=30px alt="icono instagram"></a>
       </div>
-      <p>Todos los derechos reservados.</p>
     </footer>
   </div>
   </div>

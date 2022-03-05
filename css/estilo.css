@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: 'Quicksand', sans-serif;
   color: white;
@@ -33,6 +34,16 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.61), black);
     border-radius: 15px;
     padding: 10px; }
+    .info__body__fondo .main__parrafo h2 {
+      animation-name: animacionTitulo;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      margin-bottom: 20px; }
+    .info__body__fondo .main__parrafo a:hover {
+      background-color: rgba(0, 255, 255, 0.459);
+      color: antiquewhite; }
   .info__body__fondo .bloque__footer {
     grid-area: footer; }
 
@@ -60,10 +71,27 @@
     border-radius: 15px;
     border: solid 2px blanchedalmond;
     text-align: center;
-    grid-area: contenido; }
-    @media (max-width: 420px) {
+    grid-area: contenido;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.459); }
+    .contacto__body__fondo .main__formulario h3 {
+      animation-name: animacionTitulo;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in; }
+    @media (max-width: 600px) {
       .contacto__body__fondo .main__formulario {
         width: 90%; } }
+    @media (min-width: 600px) and (max-width: 850px) {
+      .contacto__body__fondo .main__formulario {
+        width: 70%;
+        margin: 200px auto 200px auto; } }
+    @media (max-width: 330px) {
+      .contacto__body__fondo .main__formulario .contacto__formulario__textarea--ajuste,
+      .contacto__body__fondo .main__formulario .contacto__formulario__select--ajuste {
+        width: 80%; } }
+    .contacto__body__fondo .main__formulario .contacto__formulario__botones--borde {
+      border-radius: 7px; }
     .contacto__body__fondo .main__formulario .letrasNegras {
       color: black; }
   .contacto__body__fondo nav {
@@ -92,7 +120,12 @@
   .musica__body__fondo .musica__h2__titulo {
     grid-area: contenido;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-name: animacionTitulo;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in; }
   .musica__body__fondo .section__musica {
     width: 100%;
     display: flex;
@@ -102,13 +135,20 @@
     justify-content: space-around;
     grid-area: contenido;
     text-align: center; }
+    @media (min-width: 420px) and (max-width: 850px) {
+      .musica__body__fondo .section__musica {
+        flex-direction: column; } }
   .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
     border-radius: 15px;
     width: 400px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.664);
     border: solid 2px cyan; }
     @media (max-width: 420px) {
       .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
         width: 100%; } }
+    @media (min-width: 1050px) {
+      .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
+        margin: 100px auto; } }
   .musica__body__fondo .cd2 {
     border: solid 2px magenta; }
   .musica__body__fondo .bloque__footer {
@@ -129,6 +169,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around; }
+    @media (min-width: 1050px) {
+      .index__body__fondo .div__titulo__articleP {
+        margin: 150px auto; } }
     .index__body__fondo .div__titulo__articleP .article__p {
       background-color: rgba(31, 27, 27, 0.815);
       width: 400px;
@@ -136,6 +179,13 @@
       border-radius: 15px;
       border: solid 2px cyan;
       font-size: 20px; }
+      @media (min-width: 420px) and (max-width: 850px) {
+        .index__body__fondo .div__titulo__articleP .article__p {
+          margin: 100px auto 100px auto;
+          padding: 20px; } }
+      @media (max-width: 300px) {
+        .index__body__fondo .div__titulo__articleP .article__p {
+          font-size: 15px; } }
   .index__body__fondo #titulo {
     font-family: 'Island Moments', cursive;
     font-size: 200px;
@@ -143,13 +193,20 @@
     margin: 0px;
     animation-name: animacionTitulo;
     animation-duration: 3s;
-    animation-delay: 1s;
+    animation-delay: 0s;
     animation-iteration-count: initial;
     animation-timing-function: ease-in; }
     @media (max-width: 420px) {
       .index__body__fondo #titulo {
-        font-size: 150px;
-        display: inline-block; } }
+        font-size: 200px;
+        display: inline-block;
+        line-height: 1; } }
+    @media (max-width: 670px) {
+      .index__body__fondo #titulo {
+        text-align: center; } }
+    @media (max-width: 300px) {
+      .index__body__fondo #titulo {
+        font-size: 120px; } }
 
 li {
   font-size: 25px;
@@ -161,14 +218,23 @@ li {
   border: solid 2px cyan; }
   @media (max-width: 420px) {
     li {
-      font-size: 13px;
+      font-size: 15px;
       margin: 2px 5px;
       padding: 5px; } }
+  @media (min-width: 420px) and (max-width: 850px) {
+    li {
+      margin: 0px;
+      font-size: 15px; } }
+  @media (max-width: 300px) {
+    li {
+      font-size: 10px; } }
   li a {
     color: white;
     text-decoration: none; }
     li a:hover {
-      background-color: magenta; }
+      background-color: rgba(0, 255, 255, 0.253);
+      color: antiquewhite;
+      border-radius: 10px; }
 
 @keyframes animacionTitulo {
   0% {
@@ -180,7 +246,8 @@ li {
 
 .bloque__footer {
   grid-area: footer;
-  padding-top: 20px; }
+  padding-top: 20px;
+  margin-bottom: 100px; }
   .bloque__footer .bloque__links {
     display: flex;
     flex-direction: row;
@@ -204,21 +271,42 @@ footer {
     .multi__body__fondo {
       background-image: url(../imgs/img-renderizadas/daft-punk-1-400.jpg); } }
   .multi__body__fondo .tituloMultimedia {
-    display: flex;
+    text-align: center;
     margin: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.527);
     animation-name: animacionTitulo;
     animation-duration: 3s;
-    animation-delay: 1s;
+    animation-delay: 0s;
     animation-iteration-count: initial;
     animation-timing-function: ease-in; }
   .multi__body__fondo #carouselExampleIndicators {
     width: 95%;
     margin: auto; }
   .multi__body__fondo .main__div__parrafo {
-    background-image: linear-gradient(to top, rgba(0, 255, 255, 0.384), black);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.397), black);
     width: 95%;
     margin: auto;
-    border-radius: 15px;
     padding: 10px;
-    font-size: 20px;
-    border: solid 2px cyan; }
+    font-size: 20px; }
+    .multi__body__fondo .main__div__parrafo a:hover {
+      background-color: rgba(0, 255, 255, 0.459);
+      color: antiquewhite; }
+    @media (max-width: 550px) {
+      .multi__body__fondo .main__div__parrafo {
+        font-size: 15px; } }
+  .multi__body__fondo .multimedia__main__videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
+      width: 560px;
+      height: 316px; }
+      @media (max-width: 550px) {
+        .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
+          width: 90%;
+          height: 90%; } }
+      @media (max-width: 300px) {
+        .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
+          width: 250px;
+          height: 150px; } }

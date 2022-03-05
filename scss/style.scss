@@ -6,7 +6,7 @@
 
 @mixin dur-del-it-timing {
     animation-duration: 3s;
-    animation-delay: 1s;
+    animation-delay: 0s;
     animation-iteration-count: initial;
     animation-timing-function: ease-in;
 }
@@ -35,8 +35,8 @@ $estilos:(
         .body__contenedor{
             display: grid;
             grid-template-areas: "header"
-                             "contenido"
-                             "footer";
+                                 "contenido"
+                                 "footer";
             grid-template-rows: 20% auto 20%;
             justify-content: center; 
     }
@@ -52,6 +52,15 @@ $estilos:(
             background-image: linear-gradient(to top,rgba(0, 0, 0, 0.61),black);
             border-radius: 15px;
             padding: 10px;
+            h2 {
+                animation-name: animacionTitulo ;
+                @include dur-del-it-timing;
+                margin-bottom: 20px;
+            }
+            a:hover {
+                background-color: rgba(0, 255, 255, 0.459);
+                color: antiquewhite;
+            }
     }
         .bloque__footer{
             grid-area: footer;
@@ -81,9 +90,28 @@ $estilos:(
                 border: solid 2px blanchedalmond;
                 text-align: center;
                 grid-area: contenido;
-                    @media (max-width: 420px) {
+                box-shadow: 10px 10px rgba(0, 0, 0, 0.459);
+                    h3 {
+                        animation-name: animacionTitulo ;
+                        @include dur-del-it-timing;
+                    }
+                    @media (max-width: 600px) {
                             width: 90%;
                             }
+                    @media (min-width: 600px) and (max-width: 850px){
+                            width: 70%;
+                            margin: 200px auto 200px auto;
+                    }
+                    @media (max-width: 330px) {
+                .contacto__formulario__textarea--ajuste,
+                .contacto__formulario__select--ajuste  {
+                        width:80%;
+                    } 
+                  } 
+                
+            .contacto__formulario__botones--borde {
+                border-radius: 7px;
+            }
             .letrasNegras{
                 color: black;
 }
@@ -117,6 +145,8 @@ $estilos:(
             grid-area: contenido;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
+            animation-name: animacionTitulo ;
+            @include dur-del-it-timing;
     }
     .section__musica{
         width: 100%;
@@ -127,14 +157,21 @@ $estilos:(
         justify-content: space-around;
         grid-area: contenido;
         text-align: center;
+        @media (min-width: 420px) and (max-width: 850px){
+            flex-direction: column;
+        }
     }
 
     .cd1{
         border-radius: 15px;
         width: 400px;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.664);
         border: map-get($estilos, border);
         @media (max-width: 420px) {
             width: 100%;
+        }
+        @media (min-width: 1050px) {
+            margin: 100px auto;
         }
     }
     .cd2{
@@ -147,7 +184,7 @@ $estilos:(
     }
 
     /*INDEX*/
-    .index__body__fondo{
+        .index__body__fondo{
         background-image: url(../imgs/daftluces.jpg);
         @include fixed-center-cover;
                 @media (max-width: 420px) {
@@ -159,6 +196,9 @@ $estilos:(
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+                @media (min-width:1050px) {
+                    margin: 150px auto;
+                }
                 .article__p{
                     background-color:rgba(31, 27, 27, 0.815) ;
                     width: 400px;
@@ -166,9 +206,15 @@ $estilos:(
                     border-radius: map-get($estilos, border-radius);
                     border: map-get($estilos, border);
                     font-size: 20px;
+                    @media (min-width: 420px) and (max-width: 850px){
+                    margin: 100px auto 100px auto;
+                    padding: 20px;
+                    }
+                    @media (max-width: 300px) {
+                    font-size: 15px;
+                    }
         }
     }
-
         #titulo { 
             font-family: 'Island Moments', cursive;
             font-size: 200px;
@@ -177,10 +223,16 @@ $estilos:(
             animation-name: animacionTitulo ;
             @include dur-del-it-timing;
             @media (max-width: 420px) {
-                    font-size: 150px;
+                    font-size: 200px;
                     display: inline-block;
-                
+                    line-height: 1;
                 }
+            @media (max-width: 670px) {
+                text-align: center;
+            }
+            @media (max-width: 300px) {
+                font-size: 120px;
+            }
        } 
  }        
     
@@ -193,19 +245,27 @@ $estilos:(
         border-radius: map-get($estilos, border-radius);
         border: map-get($estilos, border);
         @media (max-width: 420px) {
-                font-size: 13px;
+                font-size: 15px;
                 margin: 2px 5px;
                 padding: 5px;
+        }
+        @media (min-width: 420px) and (max-width: 850px){
+            margin: 0px;
+            font-size: 15px;
+        }
+        @media (max-width: 300px) {
+            font-size: 10px;
         }
         a{
             color: white; 
             text-decoration: none;
         &:hover{
-            background-color: magenta;
+            background-color: rgba(0, 255, 255, 0.253);
+            color: antiquewhite;
+            border-radius: 10px;
     }
 }
 }
-
     @keyframes animacionTitulo {
         0%{
             opacity: 0;
@@ -221,6 +281,7 @@ $estilos:(
     .bloque__footer{
         grid-area: footer;    
         padding-top: 20px;
+        margin-bottom: 100px;
         .bloque__links{
             display: flex;
             flex-direction: row;
@@ -230,12 +291,9 @@ $estilos:(
     }
     footer{
         text-align: center;
-    
-    
         p{
             margin: 50px;
     }
-
               a {border: solid 2px cyan;}
 }   
     /*Pagina multimedia*/
@@ -246,8 +304,9 @@ $estilos:(
                     }
         @include fixed-center-cover;
         .tituloMultimedia{
-            display: flex;
+            text-align: center;
             margin: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.527);
             animation-name: animacionTitulo ;
             @include dur-del-it-timing;
     }  
@@ -256,14 +315,36 @@ $estilos:(
             margin:auto;
     }
         .main__div__parrafo{
-            background-image: linear-gradient(to top,rgba(0, 255, 255, 0.384),black);
+            background-image: linear-gradient(to top,rgba(0, 0, 0, 0.397),black);
             width: 95% ;
             margin: map-get($estilos , margin);
-            border-radius: map-get($estilos, border-radius);
             padding: 10px;
             font-size: 20px;
-            border: map-get($estilos, border);
+            a:hover {
+                background-color: rgba(0, 255, 255, 0.459);
+                color: antiquewhite;
+            }
+            @media (max-width: 550px) {
+                font-size: 15px;
+            }
     }
+    .multimedia__main__videos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+                .multimedia__main-videos--tamaño{
+                    width: 560px ;
+                    height: 316px;
+                    @media (max-width: 550px) {
+                        width: 90%; 
+                        height: 90%;
+                    }
+                    @media (max-width: 300px) {
+                        width: 250px ;
+                        height: 150px;
+                    }    
+                }
+
     }
-    
-    
+}
