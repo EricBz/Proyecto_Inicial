@@ -28,8 +28,8 @@ $estilos:(
     /*Pagina Info*/
     .info__body__fondo{
         background-image: url(../imgs/Daft_Punk_Tron.jpg);
-                @media (max-width: 420px) {
-                        background-image: url(../imgs/img-renderizadas/Daft_Punk_Tron400.jpg);
+                @media (max-width: 500px) {
+                        background-image: url(../imgs/img-renderizadas/daftpunktronrender.jpg);
                 }
         @include fixed-center-cover;
         .body__contenedor{
@@ -56,6 +56,7 @@ $estilos:(
                 animation-name: animacionTitulo ;
                 @include dur-del-it-timing;
                 margin-bottom: 20px;
+                text-align: center;
             }
             a:hover {
                 background-color: rgba(0, 255, 255, 0.459);
@@ -69,8 +70,8 @@ $estilos:(
     /*Pagina contacto*/
     .contacto__body__fondo{
         background-image: url(../imgs/daft-punk.png);
-                    @media (max-width: 420px) {
-                        background-image: url(../imgs/img-renderizadas/daft-punk400.jpg);
+                    @media (max-width: 500px) {
+                        background-image: url(../imgs/img-renderizadas/daftcontactorender.jpg);
                     }
         @include fixed-center-cover; 
             .contenedor__contacto{
@@ -98,19 +99,35 @@ $estilos:(
                     @media (max-width: 600px) {
                             width: 90%;
                             }
+                    @media (min-width: 1400px) {
+                        margin: 120px auto;
+                    }
                     @media (min-width: 600px) and (max-width: 850px){
                             width: 70%;
                             margin: 200px auto 200px auto;
                     }
-                    @media (max-width: 330px) {
+                    @media (max-width: 400px) {
                 .contacto__formulario__textarea--ajuste,
                 .contacto__formulario__select--ajuste  {
                         width:80%;
                     } 
                   } 
-                
+            .contacto__formulario__selec{
+                width: 70%;
+                margin: auto;
+            } 
+            .contacto__formulario--estilo {
+                width: 40%;
+                margin: auto;
+            }
+            ::placeholder{
+                text-align: center;
+            }
             .contacto__formulario__botones--borde {
                 border-radius: 7px;
+                padding: 3px;
+                background-color: rgba(0, 0, 255, 0.548);
+                color: azure;
             }
             .letrasNegras{
                 color: black;
@@ -126,8 +143,8 @@ $estilos:(
     /*Pagina musica*/
     .musica__body__fondo{
         background-image: url(../imgs/daft.jpg);
-                @media (max-width: 420px) {
-                    background-image: url(../imgs/img-renderizadas/daft400.jpg);
+                @media (max-width: 500px) {
+                    background-image: url(../imgs/img-renderizadas/daftrender.jpg);
                 }
         @include fixed-center-cover;
     .contenedor__musica{
@@ -143,6 +160,9 @@ $estilos:(
     }
     .musica__h2__titulo{
             grid-area: contenido;
+            width: 50%;
+            border-radius: 10px;
+            margin: auto;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
             animation-name: animacionTitulo ;
@@ -164,11 +184,12 @@ $estilos:(
 
     .cd1{
         border-radius: 15px;
-        width: 400px;
+        width: 350px;
         box-shadow: 10px 10px rgba(0, 0, 0, 0.664);
         border: map-get($estilos, border);
         @media (max-width: 420px) {
-            width: 100%;
+            width: 250px;
+            margin: auto;
         }
         @media (min-width: 1050px) {
             margin: 100px auto;
@@ -181,14 +202,20 @@ $estilos:(
     .bloque__footer{
         grid-area: footer;
     }
+    .zoom {
+        transition: transform .2s; 
+    &:hover {
+        transform: scale(1.1); 
+    }
+    }
     }
 
     /*INDEX*/
         .index__body__fondo{
         background-image: url(../imgs/daftluces.jpg);
         @include fixed-center-cover;
-                @media (max-width: 420px) {
-                    background-image: url(../imgs/img-renderizadas/daftluces400.jpg);
+                @media (max-width: 500px) {
+                    background-image: url(../imgs/img-renderizadas/daftindexrender.jpg);
                 }
         .div__titulo__articleP{
             grid-area: contenido;
@@ -199,6 +226,7 @@ $estilos:(
                 @media (min-width:1050px) {
                     margin: 150px auto;
                 }
+                
                 .article__p{
                     background-color:rgba(31, 27, 27, 0.815) ;
                     width: 400px;
@@ -206,7 +234,7 @@ $estilos:(
                     border-radius: map-get($estilos, border-radius);
                     border: map-get($estilos, border);
                     font-size: 20px;
-                    @media (min-width: 420px) and (max-width: 850px){
+                    @media (min-width: 420px) and (max-width: 1030px){
                     margin: 100px auto 100px auto;
                     padding: 20px;
                     }
@@ -245,7 +273,7 @@ $estilos:(
         border-radius: map-get($estilos, border-radius);
         border: map-get($estilos, border);
         @media (max-width: 420px) {
-                font-size: 15px;
+                font-size: 10px;
                 margin: 2px 5px;
                 padding: 5px;
         }
@@ -281,16 +309,19 @@ $estilos:(
     .bloque__footer{
         grid-area: footer;    
         padding-top: 20px;
+        padding-bottom: 20px;
         margin-bottom: 100px;
         .bloque__links{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-around; 
     }
     }
     footer{
         text-align: center;
+        background-color: rgba(0, 0, 0, 0.473);
+        border-radius: 15px;
         p{
             margin: 50px;
     }
@@ -299,13 +330,15 @@ $estilos:(
     /*Pagina multimedia*/
     .multi__body__fondo{
         background-image: url(../imgs/daft-punk-1.jpg);
-                    @media (max-width: 420px) {
-                    background-image: url(../imgs/img-renderizadas/daft-punk-1-400.jpg);
+                    @media (max-width: 500px) {
+                    background-image: url(../imgs/img-renderizadas/daft1render.jpg);
                     }
         @include fixed-center-cover;
         .tituloMultimedia{
             text-align: center;
-            margin: 40px 20px;
+            margin: auto;
+            width: 50%;
+            border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.527);
             animation-name: animacionTitulo ;
             @include dur-del-it-timing;
@@ -314,6 +347,10 @@ $estilos:(
             width: 95%;
             margin:auto;
     }
+        .multimedia__main {
+            width: 95%;
+        }
+
         .main__div__parrafo{
             background-image: linear-gradient(to top,rgba(0, 0, 0, 0.397),black);
             width: 95% ;
@@ -333,17 +370,16 @@ $estilos:(
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.397),black);
+        width: 95%;
+        margin: auto;
                 .multimedia__main-videos--tamaño{
                     width: 560px ;
                     height: 316px;
-                    @media (max-width: 550px) {
+                    @media (max-width: 640px) {
                         width: 90%; 
                         height: 90%;
-                    }
-                    @media (max-width: 300px) {
-                        width: 250px ;
-                        height: 150px;
-                    }    
+                    } 
                 }
 
     }

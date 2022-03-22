@@ -36,28 +36,28 @@
                 <form action="#" method="get" enctype="multipart/form-data">
                     <div>
                         <label for="nombre">Nombre completo</label>
-                        <input class="letrasNegras" name="nombre" type="text" placeholder="Nombre y Apellido" required autofocus
+                        <input class="letrasNegras contacto__formulario--estilo" name="nombre" type="text" placeholder="Nombre y Apellido" required autofocus
                             autocomplete="off" minlength="5" maxlength="100" aria-required="true">
                     </div>
 
                     <div>
                         <label for="mail">Mail de contacto</label>
-                        <input class="letrasNegras" name="mail" type="email" placeholder="Ingrese su mail" required autofocus
+                        <input class="letrasNegras contacto__formulario--estilo" name="mail" type="email" placeholder="Ingrese su mail" required autofocus
                             autocomplete="on" aria-required="true">
                     </div>
 
                     <fieldset>
                         <legend>¿Cómo conociste a Daft punk?</legend>
-                        <div>
+                        <div class="contacto__formulario__selec">
                             <label for="conociste">Selecciona alguna de las posibilidades</label>
                             <select name="conociste" class="letrasNegras contacto__formulario__select--ajuste">
-                                <option value="marca" selected disabled>Marca una opción</option>
-                                <option value="amigos">A través de amigos</option>
-                                <option value="internet">Casualmente en internet</option>
-                                <option value="colaboracion">Colaboración con otros artistas</option>
-                                <option value="radio">Escuchando radio</option>
-                                <option value="spotify">Me apareció en Spotify</option>
-                                <option value="otros">Otros</option>
+                                <option class="letrasNegras" value="marca" selected disabled>Marca una opción</option>
+                                <option class="letrasNegras" value="amigos">A través de amigos</option>
+                                <option class="letrasNegras" value="internet">Casualmente en internet</option>
+                                <option class="letrasNegras" value="colaboracion">Colaboración con otros artistas</option>
+                                <option class="letrasNegras" value="radio">Escuchando radio</option>
+                                <option class="letrasNegras" value="spotify">Me apareció en Spotify</option>
+                                <option class="letrasNegras" value="otros">Otros</option>
                             </select>
 
                         </div>
@@ -85,8 +85,8 @@
 
                             <legend>Envie o limpie el formulario</legend>
 
-                            <input class="letrasNegras contacto__formulario__botones--borde" type="submit" value="Enviar">
-                            <input class="letrasNegras contacto__formulario__botones--borde" type="reset" value="Limpiar">
+                            <input class="contacto__formulario__botones--borde" type="submit" value="Enviar">
+                            <input class="contacto__formulario__botones--borde" type="reset" value="Limpiar">
                         </div>
                     </fieldset>
             </div>

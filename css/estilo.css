@@ -13,9 +13,9 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .info__body__fondo {
-      background-image: url(../imgs/img-renderizadas/Daft_Punk_Tron400.jpg); } }
+      background-image: url(../imgs/img-renderizadas/daftpunktronrender.jpg); } }
   .info__body__fondo .body__contenedor {
     display: grid;
     grid-template-areas: "header"
@@ -40,7 +40,8 @@
       animation-delay: 0s;
       animation-iteration-count: initial;
       animation-timing-function: ease-in;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      text-align: center; }
     .info__body__fondo .main__parrafo a:hover {
       background-color: rgba(0, 255, 255, 0.459);
       color: antiquewhite; }
@@ -53,9 +54,9 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .contacto__body__fondo {
-      background-image: url(../imgs/img-renderizadas/daft-punk400.jpg); } }
+      background-image: url(../imgs/img-renderizadas/daftcontactorender.jpg); } }
   .contacto__body__fondo .contenedor__contacto {
     display: grid;
     grid-template-areas: "header"
@@ -82,16 +83,30 @@
     @media (max-width: 600px) {
       .contacto__body__fondo .main__formulario {
         width: 90%; } }
+    @media (min-width: 1400px) {
+      .contacto__body__fondo .main__formulario {
+        margin: 120px auto; } }
     @media (min-width: 600px) and (max-width: 850px) {
       .contacto__body__fondo .main__formulario {
         width: 70%;
         margin: 200px auto 200px auto; } }
-    @media (max-width: 330px) {
+    @media (max-width: 400px) {
       .contacto__body__fondo .main__formulario .contacto__formulario__textarea--ajuste,
       .contacto__body__fondo .main__formulario .contacto__formulario__select--ajuste {
         width: 80%; } }
+    .contacto__body__fondo .main__formulario .contacto__formulario__selec {
+      width: 70%;
+      margin: auto; }
+    .contacto__body__fondo .main__formulario .contacto__formulario--estilo {
+      width: 40%;
+      margin: auto; }
+    .contacto__body__fondo .main__formulario ::placeholder {
+      text-align: center; }
     .contacto__body__fondo .main__formulario .contacto__formulario__botones--borde {
-      border-radius: 7px; }
+      border-radius: 7px;
+      padding: 3px;
+      background-color: rgba(0, 0, 255, 0.548);
+      color: azure; }
     .contacto__body__fondo .main__formulario .letrasNegras {
       color: black; }
   .contacto__body__fondo nav {
@@ -105,9 +120,9 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .musica__body__fondo {
-      background-image: url(../imgs/img-renderizadas/daft400.jpg); } }
+      background-image: url(../imgs/img-renderizadas/daftrender.jpg); } }
   .musica__body__fondo .contenedor__musica {
     display: grid;
     grid-template-areas: "header"
@@ -119,6 +134,9 @@
     grid-area: header; }
   .musica__body__fondo .musica__h2__titulo {
     grid-area: contenido;
+    width: 50%;
+    border-radius: 10px;
+    margin: auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
     animation-name: animacionTitulo;
@@ -140,12 +158,13 @@
         flex-direction: column; } }
   .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
     border-radius: 15px;
-    width: 400px;
+    width: 350px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.664);
     border: solid 2px cyan; }
     @media (max-width: 420px) {
       .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
-        width: 100%; } }
+        width: 250px;
+        margin: auto; } }
     @media (min-width: 1050px) {
       .musica__body__fondo .cd1, .musica__body__fondo .cd2 {
         margin: 100px auto; } }
@@ -153,6 +172,10 @@
     border: solid 2px magenta; }
   .musica__body__fondo .bloque__footer {
     grid-area: footer; }
+  .musica__body__fondo .zoom {
+    transition: transform .2s; }
+    .musica__body__fondo .zoom:hover {
+      transform: scale(1.1); }
 
 /*INDEX*/
 .index__body__fondo {
@@ -160,9 +183,9 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .index__body__fondo {
-      background-image: url(../imgs/img-renderizadas/daftluces400.jpg); } }
+      background-image: url(../imgs/img-renderizadas/daftindexrender.jpg); } }
   .index__body__fondo .div__titulo__articleP {
     grid-area: contenido;
     display: flex;
@@ -179,7 +202,7 @@
       border-radius: 15px;
       border: solid 2px cyan;
       font-size: 20px; }
-      @media (min-width: 420px) and (max-width: 850px) {
+      @media (min-width: 420px) and (max-width: 1030px) {
         .index__body__fondo .div__titulo__articleP .article__p {
           margin: 100px auto 100px auto;
           padding: 20px; } }
@@ -218,7 +241,7 @@ li {
   border: solid 2px cyan; }
   @media (max-width: 420px) {
     li {
-      font-size: 15px;
+      font-size: 10px;
       margin: 2px 5px;
       padding: 5px; } }
   @media (min-width: 420px) and (max-width: 850px) {
@@ -247,6 +270,7 @@ li {
 .bloque__footer {
   grid-area: footer;
   padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 100px; }
   .bloque__footer .bloque__links {
     display: flex;
@@ -255,7 +279,9 @@ li {
     justify-content: space-around; }
 
 footer {
-  text-align: center; }
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.473);
+  border-radius: 15px; }
   footer p {
     margin: 50px; }
   footer a {
@@ -267,12 +293,14 @@ footer {
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .multi__body__fondo {
-      background-image: url(../imgs/img-renderizadas/daft-punk-1-400.jpg); } }
+      background-image: url(../imgs/img-renderizadas/daft1render.jpg); } }
   .multi__body__fondo .tituloMultimedia {
     text-align: center;
-    margin: 40px 20px;
+    margin: auto;
+    width: 50%;
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.527);
     animation-name: animacionTitulo;
     animation-duration: 3s;
@@ -282,6 +310,8 @@ footer {
   .multi__body__fondo #carouselExampleIndicators {
     width: 95%;
     margin: auto; }
+  .multi__body__fondo .multimedia__main {
+    width: 95%; }
   .multi__body__fondo .main__div__parrafo {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.397), black);
     width: 95%;
@@ -298,15 +328,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.397), black);
+    width: 95%;
+    margin: auto; }
     .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
       width: 560px;
       height: 316px; }
-      @media (max-width: 550px) {
+      @media (max-width: 640px) {
         .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
           width: 90%;
           height: 90%; } }
-      @media (max-width: 300px) {
-        .multi__body__fondo .multimedia__main__videos .multimedia__main-videos--tamaño {
-          width: 250px;
-          height: 150px; } }
